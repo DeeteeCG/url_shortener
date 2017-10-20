@@ -4,7 +4,7 @@
     <th>Shortened URL</th>
   </tr>
 
-  <% @url.each do |url| %>
+  <% @urls.each do |url| %>
     <tr>
       <td> <a href = <%= url.long_url %> ><%=url.long_url%></a></td>
       <td> <a href = <%= url.short_url %>> <%= url.short_url %></a></td>
@@ -12,3 +12,7 @@
     </tr>
   <% end%>
 </table>
+
+<%= render 'form' %>
+
+<%= link_to "shorten a Url", new_url_path %>
